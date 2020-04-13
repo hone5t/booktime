@@ -10,6 +10,11 @@ no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
     <title>Book Time</title>
+    <style>
+        .page-content{
+            padding:10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,13 +29,18 @@ no">
                     <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/about-us/">About us</a>
+                    <a class="nav-link {% if request.path == '/about-us/' %}active{% endif %}" href="/about-us/">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/contact-us/' %}active{% endif %}" href="/contact-us/">Contact us</a>
                 </li>
             </ul>
         </div>
     </nav>
+    <div class='page-content'>
     {% block content %}
     {% endblock content %}
+    </div>
     <script src="{% static 'main/js/jquery.min.js' %}">
     </script>
     <script src="{% static 'main/js/popper.min.js' %}">
