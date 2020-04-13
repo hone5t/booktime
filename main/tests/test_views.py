@@ -3,6 +3,8 @@ from pdb import set_trace
 from django.test import TestCase
 from django.urls import reverse
 
+from main.forms import ContactForm
+
 # Create your tests here.
 class TestPage(TestCase):
     
@@ -25,4 +27,4 @@ class TestPage(TestCase):
         self.assertTemplateUsed(response, 'main/contact_us.html')
         self.assertContains(response, 'Book Time')
         self.assertContains(response, 'Contact Us')
-        
+        self.assertIsInstance(response.context["form"], ContactForm)
