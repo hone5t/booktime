@@ -16,5 +16,7 @@ python manage.py migrate
 python manage.py collectstatic --noinput --clear
 # if you want to create superuser for backend
 echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('root', 'root@root.com', 'root')" | python manage.py shell
+echo "############################################# TESTING THE APP ############################################"
 python manage.py test
+echo "############################################# TESTING FINISH #############################################"
 exec "$@"
