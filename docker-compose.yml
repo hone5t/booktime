@@ -30,7 +30,7 @@ services:
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=app
+      - POSTGRES_DB=booktime
   nginx:
     build: ./nginx
     volumes:
