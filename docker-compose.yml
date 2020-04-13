@@ -3,7 +3,7 @@ version: '3.7'
 services:
   redis:
     image: redis
-    container_name: cache
+    container_name: rediscache
     expose:
       - 6379
   web:
@@ -20,7 +20,7 @@ services:
     links:
       - redis
     environment: 
-      - REDIS_URL=redis://cache
+      - REDIS_URL=redis://rediscache
     depends_on:
       - db
   db:
