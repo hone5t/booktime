@@ -1,1 +1,1 @@
-# Djano Docker starter project
+# Djano Docker BookTime E-commerce
