@@ -16,7 +16,7 @@ httptools==0.1.1
 hyperlink==19.0.0
 idna==2.9
 incremental==17.5.0
-Pillow==7.1.1
+Pillow==8.1.1
 psycopg2-binary==2.8.5
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
